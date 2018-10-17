@@ -22,7 +22,7 @@ set( SORTED_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR} )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
 
-set( CMAKE_CXX_STANDARD 11)
+set( CMAKE_CXX_STANDARD 14)
 
 # It's useful to setup the current version of our code in the build system
 # using a `semver` style

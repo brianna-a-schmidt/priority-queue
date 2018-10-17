@@ -15,8 +15,6 @@ PrecondViolatedExcep.h
 ../include/PrecondViolatedExcep.h
 
 ../include/Node.h
-iostream
--
 memory
 -
 
@@ -43,8 +41,6 @@ PrecondViolatedExcep.h
 ../include/PrecondViolatedExcep.h
 
 /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/include/Node.h
-iostream
--
 memory
 -
 
@@ -75,6 +71,8 @@ SL_PriorityQueue.h
 /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/src/SL_PriorityQueue.h
 iostream
 -
+memory
+-
 
 /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/test/main.cpp
 ../src/Node.cpp
@@ -84,5 +82,7 @@ iostream
 ../src/SL_PriorityQueue.cpp
 /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/src/SL_PriorityQueue.cpp
 iostream
+-
+string
 -
 

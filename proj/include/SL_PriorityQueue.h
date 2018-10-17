@@ -10,7 +10,7 @@ template<class ItemType>
 class SL_PriorityQueue : public PriorityQueueInterface<ItemType>
 {
 private:
-  std::unique_ptr<LinkedSortedList<ItemType> > slistPtr;
+  std::unique_ptr<LinkedSortedList<ItemType> > slistPtr ;
 
 public:
   SL_PriorityQueue();

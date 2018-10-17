@@ -67,7 +67,7 @@ LinkedSortedList<ItemType>::LinkedSortedList(const LinkedSortedList<ItemType>& a
 template <class ItemType>
 void LinkedSortedList<ItemType>::insertSorted(const ItemType& newEntry)
 {
-  std::shared_ptr<Node<ItemType> > newNodePtr (new Node<int>(newEntry));
+  std::shared_ptr<Node<ItemType> > newNodePtr = std::make_shared<Node<ItemType> >(newEntry);
   std::shared_ptr<Node<ItemType> > prevPtr = getNodeBefore(newEntry);
 
   if(isEmpty() || (prevPtr == nullptr))
