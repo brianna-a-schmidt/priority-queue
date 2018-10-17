@@ -1,6 +1,7 @@
 #ifndef _NODE
 #define _NODE
 
+#include <iostream>
 #include <memory>
 
 template<class ItemType>
