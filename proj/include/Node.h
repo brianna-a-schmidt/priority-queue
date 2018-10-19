@@ -1,3 +1,10 @@
+//NAME: Node.h
+//DESC: specification of node class
+//USAGE: #include "Node.h"
+//COMPILER: GNU g++ compiler on Linux
+//AUTHOR: Bri Schmidt
+//LAST UPDATED: October 18, 2018
+
 #ifndef _NODE
 #define _NODE
 

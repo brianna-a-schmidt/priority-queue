@@ -1,3 +1,10 @@
+//NAME: LinkedSortedList.h
+//DESC: specification of sorted list
+//USAGE: #include "LinkedSortedList.h"
+//COMPILER: GNU g++ compiler on Linux
+//AUTHOR: Bri Schmidt
+//LAST UPDATED: October 18, 2018
+
 #ifndef _LINKED_SORTED_LIST
 #define _LINKED_SORTED_LIST
 

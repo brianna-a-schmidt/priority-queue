@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj
 CMAKE_BINARY_DIR = /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/sorted.dir
+# Target rules for target CMakeFiles/alphabetize.dir
 
 # All Build rule for target.
-CMakeFiles/sorted.dir/all:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/depend
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target sorted"
-.PHONY : CMakeFiles/sorted.dir/all
+CMakeFiles/alphabetize.dir/all:
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/depend
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target alphabetize"
+.PHONY : CMakeFiles/alphabetize.dir/all
 
 # Include target in all.
-all: CMakeFiles/sorted.dir/all
+all: CMakeFiles/alphabetize.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/sorted.dir/rule: cmake_check_build_system
+CMakeFiles/alphabetize.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sorted.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/alphabetize.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/build/CMakeFiles 0
-.PHONY : CMakeFiles/sorted.dir/rule
+.PHONY : CMakeFiles/alphabetize.dir/rule
 
 # Convenience name for target.
-sorted: CMakeFiles/sorted.dir/rule
+alphabetize: CMakeFiles/alphabetize.dir/rule
 
-.PHONY : sorted
-
-# clean rule for target.
-CMakeFiles/sorted.dir/clean:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/clean
-.PHONY : CMakeFiles/sorted.dir/clean
+.PHONY : alphabetize
 
 # clean rule for target.
-clean: CMakeFiles/sorted.dir/clean
+CMakeFiles/alphabetize.dir/clean:
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/clean
+.PHONY : CMakeFiles/alphabetize.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/alphabetize.dir/clean
 
 .PHONY : clean
 

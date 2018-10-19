@@ -1,3 +1,9 @@
+//NAME: SortedListInterface.h
+//DESC: specification of sorted list interface
+//USAGE: #include "SortedListInterface.h"
+//COMPILER: GNU g++ compiler on Linux
+//AUTHOR: Bri Schmidt
+//LAST UPDATED: October 18, 2018
 #ifndef _SORTED_LIST_INTERFACE
 #define _SORTED_LIST_INTERFACE
 

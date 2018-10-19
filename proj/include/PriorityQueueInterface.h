@@ -1,3 +1,10 @@
+//NAME: PriorityQueueInterface.h
+//DESC: specification of priority queue interface
+//USAGE: #include "PriorityQueueInterface.h"
+//COMPILER: GNU g++ compiler on Linux
+//AUTHOR: Bri Schmidt
+//LAST UPDATED: October 18, 2018
+
 #ifndef PRIORITY_QUEUE_INTERFACE
 #define PRIORITY_QUEUE_INTERFACE
 

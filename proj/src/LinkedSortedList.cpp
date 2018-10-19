@@ -1,6 +1,15 @@
+//NAME: LinkedSortedList.cpp
+//DESC: implementation of sorted list class
+//USAGE: #include "LinkedSortedList.cpp"
+//COMPILER: GNU g++ compiler on Linux
+//AUTHOR: Bri Schmidt
+//LAST UPDATED: October 18, 2018
 #include "LinkedSortedList.h"
 #include <iostream>
 
+// gets node before an entry
+//pre: list has entries
+//post: the node before the entry is returned
 template <class ItemType>
 std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::getNodeBefore(const ItemType& anEntry) const
 {
@@ -15,6 +24,9 @@ std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::getNodeBefore(const
   return prevPtr;
 }
 
+// gets the node at given position
+//pre: the position exists in the list
+//post: returns the node at that position
 template <class ItemType>
 std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::getNodeAt(int position) const
 {
@@ -27,6 +39,9 @@ std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::getNodeAt(int posit
   return curPtr;
 }
 
+// copys one chain to anouther
+//pre: the other chain exists
+//post: the chain is copied to the other chain
 template <class ItemType>
 std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::copyChain(const std::shared_ptr<Node<ItemType> > origChainPtr)
 {
@@ -45,11 +60,17 @@ std::shared_ptr<Node<ItemType> > LinkedSortedList<ItemType>::copyChain(const std
   return copiedChainPtr;
 }
 
+// constructor
+//pre:none
+//post: sets item count to 0
 template <class ItemType>
 LinkedSortedList<ItemType>::LinkedSortedList() : itemCount(0)
 {
 }
 
+// destructor
+//pre: none
+//post: clears the list
 template <class ItemType>
 LinkedSortedList<ItemType>::~LinkedSortedList()
 {
@@ -58,12 +79,18 @@ LinkedSortedList<ItemType>::~LinkedSortedList()
 
 }
 
+//copy constructor
+//pre: a list exists
+//post: the chain is constructed from a copy
 template <class ItemType>
 LinkedSortedList<ItemType>::LinkedSortedList(const LinkedSortedList<ItemType>& aList)
 {
   headPtr = copyChain(aList.headPtr);
 }
 
+// inserts an item to its sorted position
+//pre: item is of ItemType
+//post: item is inserted to its sorted position
 template <class ItemType>
 void LinkedSortedList<ItemType>::insertSorted(const ItemType& newEntry)
 {
@@ -86,6 +113,9 @@ void LinkedSortedList<ItemType>::insertSorted(const ItemType& newEntry)
 
 }
 
+// removes a node
+//pre: item is there to remove
+//post: item is removed from list and order is maintained
 template <class ItemType>
 bool LinkedSortedList<ItemType>::removeSorted(const ItemType& anEntry)
 {
@@ -100,6 +130,9 @@ bool LinkedSortedList<ItemType>::removeSorted(const ItemType& anEntry)
   return entryIsThere;
 }
 
+//gets the position of an entry
+//pre: item is in list
+//post: returns position of entry
 template <class ItemType>
 int LinkedSortedList<ItemType>::getPosition(const ItemType& anEntry)
 {
@@ -124,18 +157,27 @@ int LinkedSortedList<ItemType>::getPosition(const ItemType& anEntry)
     return position;
 }
 
+// checks if the list is empty
+//pre: none
+//post:returns true if list is empty, false otherwise.
 template <class ItemType>
 bool LinkedSortedList<ItemType>::isEmpty() const
 {
   return itemCount == 0;
 }
 
+// gets the length of the list
+//pre: none
+//post: returns the number of items in list
 template <class ItemType>
 int LinkedSortedList<ItemType>::getLength() const
 {
   return itemCount;
 }
 
+//removes an entry by position from the list
+//pre: that position exists in the list
+//post: item is removed if it exists
 template <class ItemType>
 bool LinkedSortedList<ItemType>::remove(int position)
 {
@@ -160,6 +202,9 @@ bool LinkedSortedList<ItemType>::remove(int position)
   return ableToRemove;
 }
 
+// clears the list
+//pre: list is not empty
+//post: the list is empty
 template <class ItemType>
 void LinkedSortedList<ItemType>::clear()
 {
@@ -167,6 +212,9 @@ void LinkedSortedList<ItemType>::clear()
     remove(1);
 }
 
+// gets the entry at the given position
+//pre: the position exists in the list
+//post: the entry at the position is returned, otherwise an exception is caught.
 template <class ItemType>
 ItemType LinkedSortedList<ItemType>::getEntry(int position) const throw(PrecondViolatedExcep)
 {

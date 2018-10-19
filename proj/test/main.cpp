@@ -1,8 +1,15 @@
+//NAME: main.cpp
+//DESC: driver for priority queue
+//COMPILER: GNU g++ compiler on Linux
+//AUTHOR: Bri Schmidt
+//LAST UPDATED: October 18, 2018
+
 #include "../src/Node.cpp"
 #include "../src/LinkedSortedList.cpp"
 #include "../src/SL_PriorityQueue.cpp"
 #include <iostream>
 #include <string>
+
 
 int main()
 {

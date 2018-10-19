@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /nfs/home/briannaschmidt/CS302/PA03_BriannaSchmidt/proj/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sorted
+# Target rules for targets named alphabetize
 
 # Build rule for target.
-sorted: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sorted
-.PHONY : sorted
+alphabetize: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 alphabetize
+.PHONY : alphabetize
 
 # fast build rule for target.
-sorted/fast:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/build
-.PHONY : sorted/fast
+alphabetize/fast:
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/build
+.PHONY : alphabetize/fast
 
 src/LinkedSortedList.o: src/LinkedSortedList.cpp.o
 
@@ -129,7 +129,7 @@ src/LinkedSortedList.o: src/LinkedSortedList.cpp.o
 
 # target to build an object file
 src/LinkedSortedList.cpp.o:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/LinkedSortedList.cpp.o
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/LinkedSortedList.cpp.o
 .PHONY : src/LinkedSortedList.cpp.o
 
 src/LinkedSortedList.i: src/LinkedSortedList.cpp.i
@@ -138,7 +138,7 @@ src/LinkedSortedList.i: src/LinkedSortedList.cpp.i
 
 # target to preprocess a source file
 src/LinkedSortedList.cpp.i:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/LinkedSortedList.cpp.i
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/LinkedSortedList.cpp.i
 .PHONY : src/LinkedSortedList.cpp.i
 
 src/LinkedSortedList.s: src/LinkedSortedList.cpp.s
@@ -147,7 +147,7 @@ src/LinkedSortedList.s: src/LinkedSortedList.cpp.s
 
 # target to generate assembly for a file
 src/LinkedSortedList.cpp.s:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/LinkedSortedList.cpp.s
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/LinkedSortedList.cpp.s
 .PHONY : src/LinkedSortedList.cpp.s
 
 src/Node.o: src/Node.cpp.o
@@ -156,7 +156,7 @@ src/Node.o: src/Node.cpp.o
 
 # target to build an object file
 src/Node.cpp.o:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/Node.cpp.o
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/Node.cpp.o
 .PHONY : src/Node.cpp.o
 
 src/Node.i: src/Node.cpp.i
@@ -165,7 +165,7 @@ src/Node.i: src/Node.cpp.i
 
 # target to preprocess a source file
 src/Node.cpp.i:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/Node.cpp.i
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/Node.cpp.i
 .PHONY : src/Node.cpp.i
 
 src/Node.s: src/Node.cpp.s
@@ -174,7 +174,7 @@ src/Node.s: src/Node.cpp.s
 
 # target to generate assembly for a file
 src/Node.cpp.s:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/Node.cpp.s
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/Node.cpp.s
 .PHONY : src/Node.cpp.s
 
 src/PrecondViolatedExcep.o: src/PrecondViolatedExcep.cpp.o
@@ -183,7 +183,7 @@ src/PrecondViolatedExcep.o: src/PrecondViolatedExcep.cpp.o
 
 # target to build an object file
 src/PrecondViolatedExcep.cpp.o:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/PrecondViolatedExcep.cpp.o
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/PrecondViolatedExcep.cpp.o
 .PHONY : src/PrecondViolatedExcep.cpp.o
 
 src/PrecondViolatedExcep.i: src/PrecondViolatedExcep.cpp.i
@@ -192,7 +192,7 @@ src/PrecondViolatedExcep.i: src/PrecondViolatedExcep.cpp.i
 
 # target to preprocess a source file
 src/PrecondViolatedExcep.cpp.i:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/PrecondViolatedExcep.cpp.i
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/PrecondViolatedExcep.cpp.i
 .PHONY : src/PrecondViolatedExcep.cpp.i
 
 src/PrecondViolatedExcep.s: src/PrecondViolatedExcep.cpp.s
@@ -201,7 +201,7 @@ src/PrecondViolatedExcep.s: src/PrecondViolatedExcep.cpp.s
 
 # target to generate assembly for a file
 src/PrecondViolatedExcep.cpp.s:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/PrecondViolatedExcep.cpp.s
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/PrecondViolatedExcep.cpp.s
 .PHONY : src/PrecondViolatedExcep.cpp.s
 
 src/SL_PriorityQueue.o: src/SL_PriorityQueue.cpp.o
@@ -210,7 +210,7 @@ src/SL_PriorityQueue.o: src/SL_PriorityQueue.cpp.o
 
 # target to build an object file
 src/SL_PriorityQueue.cpp.o:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/SL_PriorityQueue.cpp.o
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/SL_PriorityQueue.cpp.o
 .PHONY : src/SL_PriorityQueue.cpp.o
 
 src/SL_PriorityQueue.i: src/SL_PriorityQueue.cpp.i
@@ -219,7 +219,7 @@ src/SL_PriorityQueue.i: src/SL_PriorityQueue.cpp.i
 
 # target to preprocess a source file
 src/SL_PriorityQueue.cpp.i:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/SL_PriorityQueue.cpp.i
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/SL_PriorityQueue.cpp.i
 .PHONY : src/SL_PriorityQueue.cpp.i
 
 src/SL_PriorityQueue.s: src/SL_PriorityQueue.cpp.s
@@ -228,7 +228,7 @@ src/SL_PriorityQueue.s: src/SL_PriorityQueue.cpp.s
 
 # target to generate assembly for a file
 src/SL_PriorityQueue.cpp.s:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/src/SL_PriorityQueue.cpp.s
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/src/SL_PriorityQueue.cpp.s
 .PHONY : src/SL_PriorityQueue.cpp.s
 
 test/main.o: test/main.cpp.o
@@ -237,7 +237,7 @@ test/main.o: test/main.cpp.o
 
 # target to build an object file
 test/main.cpp.o:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/test/main.cpp.o
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/test/main.cpp.o
 .PHONY : test/main.cpp.o
 
 test/main.i: test/main.cpp.i
@@ -246,7 +246,7 @@ test/main.i: test/main.cpp.i
 
 # target to preprocess a source file
 test/main.cpp.i:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/test/main.cpp.i
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/test/main.cpp.i
 .PHONY : test/main.cpp.i
 
 test/main.s: test/main.cpp.s
@@ -255,7 +255,7 @@ test/main.s: test/main.cpp.s
 
 # target to generate assembly for a file
 test/main.cpp.s:
-	$(MAKE) -f CMakeFiles/sorted.dir/build.make CMakeFiles/sorted.dir/test/main.cpp.s
+	$(MAKE) -f CMakeFiles/alphabetize.dir/build.make CMakeFiles/alphabetize.dir/test/main.cpp.s
 .PHONY : test/main.cpp.s
 
 # Help Target
@@ -264,9 +264,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sorted"
+	@echo "... edit_cache"
+	@echo "... alphabetize"
 	@echo "... src/LinkedSortedList.o"
 	@echo "... src/LinkedSortedList.i"
 	@echo "... src/LinkedSortedList.s"
